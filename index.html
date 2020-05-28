@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲜花网</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- top广告 -->
+    <div class="top">
+    </div>
+    <!-- top广告  end-->
+    <!-- top-nav -->
+    <div class="top-nav">
+        <div class="top-nav-wrapper">
+            <ul class="top-nav-l">
+                <li class="menu">
+                    <a href="/" onclick="addfavorite();return false;"><span
+                            class="icon icon-star"></span>收藏鲜花网(hua.com)</a>
+                </li>
+                <li class="menu menu-dropdown">
+                    <a href="javascript:void(0)"><span class="icon icon-weixin"></span>关注微信</a>
+                    <div class="dropdown-box">
+                        <img src="//img02.hua.com/pc/pimg/home/wxguanjia_qrcode.png" width="124">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>
+                <li class="menu menu-dropdown">
+                    <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank" aria-expanded="false"><span
+                            class="icon icon-mobile"></span>花礼网app</a>
+                    <div class="dropdown-box">
+                        <img src="//img02.hua.com/pc/pimg/home/app_download_qrcode.png" width="120">
+                        <p>新人专享100元APP礼包</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="top-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo"><a href="/Passport/Login/?backUrl=https://www.hua.com/"
+                        rel="nofollow">你好，请登录</a><a href="/Passport/Register/" rel="nofollow">注册</a></li>
+                <!--登陆状态信息显示end-->
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="menu menu-dropdown">
+                </li>
+                <!--购物车信息显示start-->
+                <li class="menu">
+                    <a href="/shopping/showcart/" rel="nofollow" target="_blank">
+                        购物车
+                        <span class="text-primary" id="gwcCount">(1)</span>
+                    </a>
+                </li>
+                <!--购物车信息显示end-->
+                <li class="menu slogan">
+                    中国鲜花礼品网:中国鲜花网领先品牌
+                </li>
+            </ul>
+        </div>
+    </div>
+     <!-- top-nav end-->
+    <!-- header 头部 logo -->
+    <div id="header" class="clearfix">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" class="logo-nav"></a>
+            </div>
+            <div class="search-box">
+                <form name="i_search" method="get" action="/search/">
+                    <div class="search-box-group">
+                        <div class="search-box-icon">
+                            <span class="icon icon-search"></span>
+                        </div>
+                        <input name="keyword" type="text" class="search-box-input" placeholder="商品搜索">
+                        <span class="search-box-btn">
+                            <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+                        </span>
+                    </div>
+                </form>
+                <div class="search-box-hotwords">
+
+                    <a href="/hongmeigui/" target="_blank">红玫瑰</a><a href="/yongshenghua/" target="_blank">永生花</a><a
+                        href="/shengriliwu/" target="_blank">生日鲜花</a><a href="/qiyetuangou/gift_card.html"
+                        target="_blank">礼品卡</a>
+
+                </div>
+            </div>
+            <div class="service serviceDefault">
+                <div class="service-item">
+                    <span class="icon icon-phone"></span>
+                    <div class="service-item-info">400-889-8188</div>
+                </div>
+                <div class="service-item">
+                    <a id="header-chat" href="javascript:void(0);">
+                        <span class="icon icon-headset"></span>
+                        <div class="service-item-info">在线客服</div>
+                    </a>
+                </div>
+            </div>
+            <div class="service serviceVip">
+                <div class="service-item vipwechatchat">
+                    <span class="icon icon-diamond"></span>
+                    <div class="service-item-info">微信1对1钻石客户经理<br>专线：400-830-3920</div>
+                    <div class="vipwechatchat-box">
+                        <h3>微信1对1客服经理</h3>
+                        <img class="img-responsive" style="width: 120px;display: inline-block;"
+                            src="https://img02.hua.com/m/member/VIPChatQR.jpg">
+                        <p>扫一扫添加客户经理微信</p>
+                        <p>微信号：VIP-Service-Hua</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <a id="header-chat" href="javascript:void(0);">
+                        <span class="icon icon-headset"></span>
+                        <div class="service-item-info">在线客服</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner-top">
+            <div class="container">
+                <div class="allclass">
+                    <div class="allclass-top"><i></i><span>所有分类</span></div>
+                    <div class="allclass-con">
+                         <div class="allclass-con-item">
+                             <h4><a href="javvascript:;">鲜花用途</a></h4>
+                             <ul>
+                                 <li><a href="javvascript:;">爱情鲜花</a></li>
+                                 <li><a href="javvascript:;">生日鲜花</a></li>
+                                 <li><a href="javvascript:;">友情鲜花</a></li>
+                                 <li><a href="javvascript:;">问候长辈</a></li>
+                                 <li><a href="javvascript:;">探病慰问</a></li>
+                                 <li><a href="javvascript:;">道歉鲜花</a></li>
+                                 <li><a href="javvascript:;">祝贺鲜花</a></li>
+                                 <li><a href="javvascript:;">婚庆鲜花</a></li>
+                                 <li><a href="javvascript:;">商务鲜花</a></li>
+                             </ul>
+                         </div>
+                         <div class="allclass-con-item">
+                            <h4><a href="javvascript:;">鲜花花材</a></h4>
+                            <ul>
+                                <li><a href="javvascript:;">玫瑰</a></li>
+                                <li><a href="javvascript:;">康乃馨</a></li>
+                                <li><a href="javvascript:;">百合</a></li>
+                                <li><a href="javvascript:;">向日葵</a></li>
+                                <li><a href="javvascript:;">扶郎</a></li>
+                                <li><a href="javvascript:;">郁金香</a></li>
+                                <li><a href="javvascript:;">马蹄莲</a></li>
+                            </ul>
+                        </div>
+                        <div class="allclass-con-item">
+                            <h4><a href="javvascript:;">永生花</a><span></span></h4>
+                            <ul>
+                                <li><a href="javvascript:;">永生瓶花</a></li>
+                                <li><a href="javvascript:;">经典花盒</a></li>
+                                <li><a href="javvascript:;">特色永生花</a></li>
+                            </ul>
+                        </div>
+                        <div class="allclass-con-item">
+                            <h4><a href="javvascript:;">蛋糕</a><span></span></h4>
+                            <ul>
+                                <li><a href="javvascript:;">元祖</a></li>
+                                <li><a href="javvascript:;">幸福西饼</a></li>
+                                <li><a href="javvascript:;">21cake</a></li>
+                                <li><a href="javvascript:;">诺心蛋糕</a></li>
+                                <li><a href="javvascript:;">窝夫小子</a></li>
+                                <li><a href="javvascript:;">BONCAKE</a></li>
+                            </ul>
+                        </div>
+                        <div class="allclass-con-item">
+                            <h4><a href="javvascript:;">礼品</a>/<a href="javvascript:;">公仔</a>/<a href="javvascript:;">绿植</a><span></span></h4>
+                        </div>
+                        <div class="allclass-con-item">
+                            <h4>IT数码/小家电<span></span></h4>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="nav">
+                      <ul>
+                          <li><a href="javascript:;">鲜花</a></li>
+                          <li><a href="javascript:;">永生花</a></li>
+                          <li><a href="javascript:;">蛋糕</a></li>
+                          <li><a href="javascript:;">礼品</a></li>
+                          <li><a href="javascript:;">巧克力</a></li>
+                          <li><a href="javascript:;">花语大全</a></li>
+                          <li><a href="javascript:;">企业团购</a></li>
+                          <li><a href="javascript:;">设计师臻选鲜花</a></li>
+                          <li><a href="javascript:;" style="color:#FF734C;">儿童节鲜花礼物</a></li>
+                      </ul>
+                  </div>
+            </div>
+            
+        </div>
+        <div class="banner-con">
+            <ul>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- header 头部 logo  end-->
+    <!-- banner-end -->
+    <!-- 服务 -->
+    <div class="main-server">
+        <ul>
+            <li><a href="javascript:;">
+                <span></span>
+                <h4>鲜花电商认证龙头企业</h4>
+            </a></li>
+            <li><a href="javascript:;">
+                <span></span>
+                <h4>15年品牌</h4>
+            </a></li>
+            <li><a href="javascript:;">
+                <span></span>
+                <h4>3小时全国送花</h4>
+            </a></li>
+            <li><a href="javascript:;">
+                <span></span>
+                <h4>200%退赔承诺</h4>
+            </a></li>
+            <li><a href="javascript:;">
+                <span></span>
+                <h4>最近370400条评价</h4>
+            </a></li>
+        </ul>
+    </div>
+    <!-- 服务end -->
+    <!-- 活动入口 -->
+    <div class="move-about">
+        
+    </div>
+</body>
+
+</html>
