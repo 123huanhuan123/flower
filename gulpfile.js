@@ -22,8 +22,14 @@ gulp.task("data", () => {
 
 //js代码
 gulp.task("scripts", () => {
-    return gulp.src(["*.js", "!gulpfile.js"])
+    return gulp.src(["js/*.js", "!gulpfile.js"])
     .pipe(gulp.dest("dist/js"))
+    .pipe(connect.reload());
+})
+//php代码
+gulp.task("php", () => {
+    return gulp.src("api/*.php")
+    .pipe(gulp.dest("dist/api"))
     .pipe(connect.reload());
 })
 
@@ -33,18 +39,15 @@ const minifyCSS = require("gulp-minify-css");
 const rename = require("gulp-rename");
 
 gulp.task("scssAll", () => {
-    return gulp.src("stylesheet/*.scss")
+    return gulp.src("stylesheet/*.{scss,css}")
     .pipe(scss())
-    .pipe(gulp.dest("dist/css"))
-    .pipe(minifyCSS())
-    .pipe(rename("index.min.css"))
     .pipe(gulp.dest("dist/css"))
     .pipe(connect.reload());
 })
 
 
 //编写一个可以执行上述所有文件的任务
-gulp.task("build", ["copy-html", "images", "scripts", "data", "scssAll"], () => {
+gulp.task("build", ["copy-html", "images", "scripts", "data", "scssAll","php"], () => {
     console.log("项目建立成功");
 })
 
@@ -53,8 +56,10 @@ gulp.task("watch", () => {
     gulp.watch("*.html", ["copy-html"]);
     gulp.watch("*.{jpg,png}", ["images"]);
     gulp.watch(["*.json", "!package.json"], ['data']);
-    gulp.watch(["*.js", "!gulpfile.js"], ['scripts']);
+    gulp.watch(["js/*.js", "!gulpfile.js"], ['scripts']);
     gulp.watch("stylesheet/*.scss", ['scssAll']);
+    gulp.watch("api/*.php", ['php']);
+    gulp.watch("*.json", ['data']);
 })
 
 //启动一个临时服务器  不支持运行php
@@ -62,11 +67,11 @@ const connect = require("gulp-connect");
 gulp.task("server", () => {
     connect.server({
         root: "dist",
-        port: 8888,
+        port:8080,
         livereload: true
     })
 })
 
 
 //同时启动服务和监听
-gulp.task("default", ["watch", 'server']);
+gulp.task("default", ['build',"watch", 'server']);

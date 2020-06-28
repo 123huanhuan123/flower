@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <script src="./js//cart.js" type="module"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="./layer-v3.1.1/layer/layer.js"></script>
+</head>
+
+<body>
+    <!-- top-nav -->
+    <div class="top-nav">
+        <div class="container">
+           <ul class="top-nav-left">
+               <li><a href="javascript:;">收藏唯你网(weini.com)</a></li>
+               <li><a href="javascript:;">关注微信</a></li>
+               <li><a href="javascript:;">唯你网app</a></li>
+           </ul>
+           <ul class="top-nav-right">
+               <li><a href="./login.html" id="username">你好，请登录</a></li>
+               <li><a href="./register.html">注册</a>|</li>
+               <li><a href="javascript:;">订单查询</a>|</li>
+               <li><a href="javascript:;">我的唯你</a>|</li>
+               <li><a href="javascript:;">客户服务</a>|</li>
+               <li><a href="./cart.html">购物车<span style="color: red;">（<b class="cartnum">0</b>）</span>|</a></li>
+               <li><a href="javascript:;">唯你-爱在心头</a></li>
+           </ul>
+        </div>
+    </div>
+     <!-- top-nav end-->
+    <!-- header 头部 logo -->
+    <div id="header" class="clearfix">
+        <div class="header-container">
+            <div class="logo">
+                <a href="./index.html" class="logo-nav"></a>
+            </div>
+            <!-- <div class="search-box">
+                <form name="i_search" method="get" action="/search/">
+                    <div class="search-box-group">
+                        <div class="search-box-icon">
+                            <span class="icon icon-search"></span>
+                        </div>
+                        <input name="keyword" type="text" class="search-box-input" placeholder="商品搜索">
+                        <span class="search-box-btn">
+                            <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+                        </span>
+                    </div>
+                </form>
+                <div class="search-box-hotwords">
+
+                    <a href="/hongmeigui/" target="_blank">红玫瑰</a><a href="/yongshenghua/" target="_blank">永生花</a><a
+                        href="/shengriliwu/" target="_blank">生日鲜花</a><a href="/qiyetuangou/gift_card.html"
+                        target="_blank">礼品卡</a>
+
+                </div>
+            </div> -->
+            <div class="service serviceDefault">
+                <div class="service-item">
+                    <span class="icon icon-phone"></span>
+                    <div class="service-item-info">400-889-8188</div>
+                </div>
+                <div class="service-item">
+                    <a id="header-chat" href="javascript:void(0);">
+                        <span class="icon icon-headset"></span>
+                        <div class="service-item-info">在线客服</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header 头部 logo  end-->
+    <!-- cart-list -->
+    <div class="c-container">
+        <div class="cart-list">
+            <div class="cart-hd">
+                <ul class="order-title">
+                    <li class="selecter"><input type="checkbox" name="" id="" class="check-all"></li>
+                    <li class="product">商品名称</li>
+                    <li class="market-price">市场价</li>
+                    <li class="order-price">订购价</li>
+                    <li class="num">数量</li>
+                    <li class="operate">操作</li>
+                </ul>
+            </div>
+            <div class="cart-bd">
+                
+                
+            </div>
+        </div>
+        <div class="set-bar">
+            <div class="set-info">
+               <a href="javascript:;" class="back">
+                   <span></span>
+                   继续挑选
+               </a>
+               <div class="set-stat">
+                   
+                应付金额:
+                    <div class="price">
+                        <span class="price-sign">￥</span>
+                        <span class="price-num" id="priceTotal">00.00</span>
+                    </div>
+               </div>
+            </div>
+            <button class="jiesuan" id="jiesuan" onclick="cart.jies()">去结算</button>
+        </div>
+    </div>
+ <!-- 分页 -->
+ <div class="list-page c-container">
+    <div class="page-con">
+        <span class="prevbtn">
+          < 上一页
+      </span>
+      <ul class="page-ul">
+          <li class="active">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+      </ul>
+      <span class="nextbtn">
+       下一页 >
+   </span>
+    </div>
+</div>
+ <!-- 分页 end-->
+</body>
+
+</html>
