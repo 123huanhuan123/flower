@@ -27,7 +27,7 @@ class Index{
     }
     init(){
         Utils.jsonp({
-            url:'http://localhost/flower/dist/api/index.php',
+            url:'./api/index.php',
             data:{userid:this.userid},
             cb_name:'callback',
             callback:(res)=>{

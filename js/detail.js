@@ -37,7 +37,7 @@ class Detail{
        var serArr = window.location.search.split('=');
        this.goodsid=serArr[1];
        Utils.jsonp({
-            url:'http://localhost/flower/dist/api/detail.php',
+            url:'./api/detail.php',
             cb_name:'callback',
             data:{id:this.goodsid},
             callback:res=>{
@@ -166,7 +166,7 @@ class Detail{
              let goodsid= this.goodsid;
              console.log(userid,goodsnum,imgsrc,goodsid);
              Utils.jsonp({
-                url:'http://localhost/flower/dist/api/cart.php',
+                url:'./api/cart.php',
                 cb_name:'callback',
                 data:{userid:userid,goodsnum:goodsnum,imgsrc:imgsrc,goodsid:goodsid},
                 callback:(res)=>{

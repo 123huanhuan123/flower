@@ -41,7 +41,7 @@ class List{
             return;
         }
         Utils.jsonp({
-            url:'http://localhost/flower/dist/api/list.php',
+            url:'./api/list.php',
             cb_name:'callback',
             data:{psize:size,num:10},
             callback:res=>{
@@ -108,7 +108,7 @@ class List{
             this.$('.search-box-input').value=this.goodsval;
             this.$(".title-f").innerHTML=this.goodsval;
             Utils.jsonp({
-                url:'http://localhost/flower/dist/api/select.php',
+                url:'./api/select.php',
                 cb_name:'callback1',
                 data:{keyword:this.goodsval},
                 callback:res=>{

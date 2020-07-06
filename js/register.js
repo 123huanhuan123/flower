@@ -55,7 +55,7 @@ class Reg{
         }
         Utils.ajax({
             type:"post",
-            url:"http://localhost/flower/dist/api/reg.php",
+            url:"./api/reg.php",
             data:{username,phone,email,pwd},
             dataType:'json'
         }).then(res=>{

@@ -39,7 +39,7 @@ class Cart{
     init(size=1){
         
         Utils.jsonp({
-            url:'http://localhost/flower/dist/api/cartlist.php',
+            url:'./api/cartlist.php',
             cb_name:'callback',
             data:{userid:this.userid,psize:size,num:3},
             callback:res=>{
@@ -124,7 +124,7 @@ class Cart{
         }
         ele.previousSibling.value=count;
         Utils.jsonp({
-            url:'http://localhost/flower/dist/api/upcart.php',
+            url:'./api/upcart.php',
             cb_name:'callback1',
             data:{foo:'update',goodsid:id,goodsnum:count},
             callback:res=>{
@@ -143,7 +143,7 @@ class Cart{
         }
         ele.nextSibling.value=count;
         Utils.jsonp({
-            url:'http://localhost/flower/dist/api/upcart.php',
+            url:'./api/upcart.php',
             cb_name:'callback1',
             data:{foo:'update',goodsid:id,goodsnum:count},
             callback:res=>{
@@ -157,7 +157,7 @@ class Cart{
         let checkthis = trObj.querySelector(".check-one");
         trObj.remove();
         Utils.jsonp({
-            url:'http://localhost/flower/dist/api/upcart.php',
+            url:'./api/upcart.php',
             cb_name:'callback',
             data:{foo:'del',goodsid:id},
             callback:res=>{

@@ -26,7 +26,7 @@ class Login{
         }
         Utils.ajax({
             type:"post",
-            url:"http://localhost/flower/dist/api/login.php",
+            url:"./api/login.php",
             data:{phone,pwd},
             dataType:'json'
         }).then(res=>{

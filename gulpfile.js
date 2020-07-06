@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 
-
+//拷贝html
 gulp.task("copy-html", () => {
     return gulp.src("*.html")
     .pipe(gulp.dest("dist/"))
@@ -42,6 +42,9 @@ gulp.task("scssAll", () => {
     return gulp.src("stylesheet/*.{scss,css}")
     .pipe(scss())
     .pipe(gulp.dest("dist/css"))
+    // .pipe(minifyCSS())
+    // .pipe(rename("index.min.css"))
+    // .pipe(gulp.dest("dist/css"))
     .pipe(connect.reload());
 })
 
